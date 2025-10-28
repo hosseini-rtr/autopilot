@@ -1,0 +1,47 @@
+# Project Configuration
+# Main settings for the autopilot project
+
+# Model Configuration
+MODEL_PATH: "model.h5"
+MODEL_FORMAT: "h5" # Options: h5, pb, onnx
+
+# Training Configuration
+BATCH_SIZE: 32
+EPOCHS: 50
+VALIDATION_SPLIT: 0.2
+LEARNING_RATE: 0.001
+
+# Image Processing
+IMAGE_HEIGHT: 66
+IMAGE_WIDTH: 200
+IMAGE_CHANNELS: 3
+
+# Driving Configuration
+SPEED_LIMIT: 10
+MAX_SPEED: 50
+MIN_SPEED: 0
+
+# Server Configuration
+SERVER_HOST: "0.0.0.0"
+SERVER_PORT: 4567
+ASYNC_MODE: "eventlet"
+
+# Data Augmentation
+AUGMENTATION_ENABLED: true
+AUGMENTATION_BRIGHTNESS_RANGE: [0.5, 1.2]
+AUGMENTATION_ROTATION_RANGE: 10
+AUGMENTATION_WIDTH_SHIFT_RANGE: 0.1
+AUGMENTATION_HEIGHT_SHIFT_RANGE: 0.1
+
+# Lane Detection Parameters
+CANNY_THRESHOLD_LOW: 50
+CANNY_THRESHOLD_HIGH: 150
+HOUGH_RHO: 2
+HOUGH_THETA: 0.0175 # pi/180
+HOUGH_THRESHOLD: 100
+MIN_LINE_LENGTH: 40
+MAX_LINE_GAP: 5
+
+# Logging
+LOG_LEVEL: "INFO"
+LOG_FILE: "logs/autopilot.log"
